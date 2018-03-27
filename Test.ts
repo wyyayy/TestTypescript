@@ -25,6 +25,30 @@ var stage2 = <IMyInterface> <any> example;
 stage2.start();
 stage2.stop();
 
+
+class Base
+{
+    public name:string = "base";
+
+    constructor()
+    {
+
+    }
+}
+
+class Child extends Base
+{
+    constructor()
+    {
+        super();
+        this.name = "child";
+    }
+}
+
+var child1 = new Child();
+console.log(child1 instanceof(Child));
+console.log(child1 instanceof(Base));
+
 // var test:any = {};
 // test.start = ()=>
 // {
